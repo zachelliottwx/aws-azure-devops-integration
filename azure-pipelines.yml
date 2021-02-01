@@ -32,3 +32,11 @@ steps:
     failOnStandardError: false
   displayName: 'cdk deploy'
 
+- task: SecretsManagerCreateOrUpdateSecret@1
+  inputs:
+    awsCredentials: 'AWS Connection'
+    regionName: 'us-east-1'
+    secretNameOrId: 'ElmApplicationVersion'
+    secretValueSource: 'inline'
+    secretValue: '4.2.2'
+    autoCreateSecret: true
