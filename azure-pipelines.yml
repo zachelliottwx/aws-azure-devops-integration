@@ -40,3 +40,10 @@ steps:
     secretValueSource: 'inline'
     secretValue: '4.2.2'
     autoCreateSecret: true
+
+- task: SecretsManagerGetSecret@1
+  inputs:
+    awsCredentials: 'AWS Connection'
+    regionName: 'us-east-1'
+    secretIdOrName: 'ElmApplicationVersion'
+    variableName: 'ElmAppVersion'
