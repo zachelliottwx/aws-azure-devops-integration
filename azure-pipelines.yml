@@ -38,7 +38,7 @@ steps:
     regionName: 'us-east-1'
     secretNameOrId: 'ElmApplicationVersion'
     secretValueSource: 'inline'
-    secretValue: '4.2.2'
+    secretValue: '4.2.3'
     autoCreateSecret: true
 
 - task: SecretsManagerGetSecret@1
